@@ -39,7 +39,8 @@
 <script>
 const SUPABASE_URL='https://nmzyvstpmadbygtgihdq.supabase.co';
 const SUPABASE_ANON_KEY='sb_publishable_3dokOm2MW63UeEWeAPuYYg_csTBcAeU';
-if(!window.supabase?.createClient){throw new Error('Supabase library failed to load. Please refresh the page or try another network.')}\nconst db=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}});
+if(!window.supabase?.createClient){throw new Error('Supabase library failed to load. Please refresh the page or try another network.')}
+const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}});
 const WHATSAPP='917907615643';
 let products=[],activeFilter='All',isAdmin=false;
 function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
